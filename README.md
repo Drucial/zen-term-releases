@@ -9,7 +9,7 @@ through all of it.
 ## Download
 
 Grab the latest `ZenTerm-<version>-arm64.dmg` from
-[Releases](https://github.com/Drucial/zen-term-releases/releases), open it, and
+[Releases](https://github.com/zen-term/zen-term-releases/releases), open it, and
 drag ZenTerm to Applications.
 
 **Requirements:** macOS 14 or later, Apple Silicon.
@@ -29,7 +29,7 @@ and [`workspaces`](docs/config/workspaces) for workspaces.
 
 ## Neovim
 
-[zen-navigator.nvim](https://github.com/Drucial/zen-navigator.nvim) makes
+[zen-navigator.nvim](https://github.com/zen-term/zen-navigator.nvim) makes
 `Ctrl-hjkl` walk across Neovim splits and ZenTerm panes as one motion. It is
 opt-in, and [onboarding](docs/onboarding.md) covers the setup. The socket
 contract it is written against is
@@ -38,7 +38,7 @@ contract it is written against is
 ## Issues
 
 Found a bug or have a request? Open an
-[issue](https://github.com/Drucial/zen-term-releases/issues) here. Include the
+[issue](https://github.com/zen-term/zen-term-releases/issues) here. Include the
 version, which Settings (⌘,) shows at the bottom of the left column.
 
 ZenTerm is closed source. This repository hosts releases and issue tracking.
