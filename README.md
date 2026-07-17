@@ -27,6 +27,14 @@ writes it for you. Annotated references for every option:
 [`config`](docs/config/config) for appearance, behavior, tools, and shortcuts,
 and [`workspaces`](docs/config/workspaces) for workspaces.
 
+## Neovim
+
+[zen-navigator.nvim](https://github.com/Drucial/zen-navigator.nvim) makes
+`Ctrl-hjkl` walk across Neovim splits and ZenTerm panes as one motion. It is
+opt-in, and [onboarding](docs/onboarding.md) covers the setup. The socket
+contract it is written against is
+[documented here](docs/nvim-navigator-protocol.md).
+
 ## Issues
 
 Found a bug or have a request? Open an
