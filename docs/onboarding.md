@@ -61,7 +61,8 @@ Pane movement is vim's arrow keys. **H** is left, **L** is right, **J** is down,
 |                                  |                             |
 | -------------------------------- | --------------------------- |
 | Resize the pane                  | `⌘⇧H` `⌘⇧J` `⌘⇧K` `⌘⇧L`     |
-| Zoom the pane to fill the window | `⌘F`                        |
+| Focus Mode (pane fills the window) | `⌘F`                      |
+| Fill Screen (window fills the desktop) | `⌘⇧F`                 |
 | Bottom drawer                    | `⌘B`                        |
 | Right drawer                     | `⌘\`                        |
 | New window                       | `⌘N`                        |
@@ -150,16 +151,12 @@ colors the whole app, not only the terminal text.
 new one. If it collides with an existing shortcut, the app tells you which action
 already owns it.
 
-## Two things that look like bugs
+## One thing that looks like a bug
 
 **Links need ⌘-click.** Hold ⌘ and a link underlines and becomes clickable. A
 plain click does nothing, and the cursor stays a text cursor over links. That is
 deliberate. A terminal is full of text that only looks like a link, and a stray
 click should not open your browser.
-
-**Esc does not close an open dropdown.** In Settings, with the theme dropdown or
-the icon grid open, Esc will not back out of it. Click elsewhere instead. This
-one is a real bug and Drew is fixing it.
 
 ## When something breaks
 
@@ -181,6 +178,10 @@ ZenTerm updates itself. When a new version ships, a card appears top-right: the
 version, what changed, and Install. It downloads and installs in place, then
 offers to relaunch. Skip a version and it stays skipped. Choose Later and ZenTerm
 offers it again at its next check.
+
+To check on your own, open the command palette (⌘P) and run Check for Updates; if
+nothing is waiting it tells you you're on the latest. To check only when you ask,
+turn off the background checks in Settings → General, and the command still works.
 
 One catch, this first time only: updating from a build older than this one still
 means downloading the DMG by hand, because that older build shipped without the
