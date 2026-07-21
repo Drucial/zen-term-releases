@@ -6,8 +6,9 @@
 #
 # Format: ghostty-flavored `key = value`. Lines starting with `#` and blank
 # lines are ignored. Unknown keys are ignored. A malformed value falls back to
-# the default; an out-of-range number is clamped. Nothing here can crash the app
-# (bad lines are logged and skipped). Config is read once at launch. Restart to
+# the default; an out-of-range number is clamped. Nothing here can crash the app:
+# a bad value is logged, skipped, and shown in the app (inline on its Settings
+# row, or in a notice when you reload). Config is read once at launch. Restart to
 # apply hand-edits. Changes made in the in-app Settings card (⌘,) apply live.
 
 # ─── Theme ───────────────────────────────────────────────────────────────────
@@ -99,6 +100,16 @@
 # In-app Settings edit: applies live.
 # automatic-update-checks = true      # true | false
 
+# ─── Diagnostics ─────────────────────────────────────────────────────────────
+
+# Tee verbose diagnostics to the log file. Off by default: the log then holds
+# warnings, errors, and a trail of key actions (panes, tabs, drawers). Turn it on
+# to add deep traces for a bug report. The log is at
+# ~/Library/Logs/ZenTerm/zen-term.log; ZENTERM_LOG_VERBOSE=1 is the env equivalent.
+# To attach it to a bug report, use Help → Export Diagnostics: it saves a zip of the
+# log files plus your system info (app version, macOS version, arch).
+# debug = false                       # true | false
+
 # ─── Tool floats ─────────────────────────────────────────────────────────────
 #
 # Command overlays (dock button + command-palette entry + keybinding) whose
@@ -176,8 +187,9 @@
 #   resize_left  resize_right  resize_up  resize_down
 #   new_tab  new_window  prev_tab  next_tab  select_tab_1 … select_tab_9
 #   toggle_bottom_drawer  toggle_right_drawer  toggle_focus_mode  fill_screen
-#   toggle_repo_picker  toggle_command_palette  open_settings  reload_config
+#   toggle_workspace_picker  toggle_command_palette  open_settings  reload_config
 #   check_for_updates   (no default binding; bind a chord to reach it by keyboard)
+#   report_issue        (no default binding; also in the command palette and Help menu)
 #   toggle_float:<id>   (bind a second chord to one of your floats)
 #
 # Defaults (uncomment to change; these are what ships):
@@ -201,7 +213,7 @@
 # keybind = toggle_right_drawer=cmd+\
 # keybind = toggle_focus_mode=cmd+f              # one pane/drawer fills the window
 # keybind = fill_screen=cmd+shift+f              # the window fills the desktop
-# keybind = toggle_repo_picker=cmd+shift+p
+# keybind = toggle_workspace_picker=cmd+shift+p
 # keybind = toggle_command_palette=cmd+p
 # keybind = open_settings=cmd+,
 # keybind = reload_config=cmd+opt+r
